@@ -30,3 +30,35 @@ E:\doan web 2\Do_an\webdaugia\obj\Debug\webdaugia.csprojResolveAssemblyReference
 E:\doan web 2\Do_an\webdaugia\obj\Debug\webdaugia.dll
 E:\doan web 2\Do_an\webdaugia\obj\Debug\webdaugia.pdb
 E:\doan web 2\Do_an\webdaugia\bin\Microsoft.Web.Infrastructure.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\ApplicationInsights.config
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\webdaugia.dll.config
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\webdaugia.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\webdaugia.pdb
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.DependencyCollector.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.Web.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.WindowsServer.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.ApplicationInsights.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.Web.Infrastructure.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Helpers.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Mvc.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Razor.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.Deployment.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.Razor.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.DependencyCollector.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.Web.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.AI.WindowsServer.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\Microsoft.ApplicationInsights.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Razor.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.Deployment.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Webpages.Razor.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Helpers.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\bin\System.Web.Mvc.xml
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\obj\Debug\webdaugia.csprojResolveAssemblyReference.cache
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\obj\Debug\webdaugia.dll
+E:\Web2\GitHub\Web2_Auction\Do_an\webdaugia\obj\Debug\webdaugia.pdb

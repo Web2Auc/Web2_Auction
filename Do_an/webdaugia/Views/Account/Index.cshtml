@@ -1,7 +1,97 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";    
+}
+
+@section css{
+     <style type="text/css">
+         .error {
+            color: #F00;
+            background-color: #FFF;
+        }
+         
+     </style>
+    
+    }
+
+@section js {
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/wordpress/jquery-validation-1.16.0/dist/jquery.validate.js"></script>
+    <script src="~/wordpress/jquery-validation-1.16.0/dist/additional-methods.js"></script>
+    <script type="text/javascript">
+  $( function() {
+      $("#reg_birthday").datepicker();
+  });
+  
+
+  $("#frmregister").validate({
+      rules: {
+          username: {
+              required: true
+          },
+          Password: {
+              required: true,
+              minlength: 6
+          },
+          Confirmpassword: {
+              equalTo: '#reg_Password'
+          },
+          Name: {
+              required: true
+          },
+          email: {
+              required: true
+          },
+          birthday: {
+              required: true
+          },
+
+      },
+      
+      messages: {
+          username: {
+              required: 'Username cannot be empty'
+          },
+          Password: {
+              required: 'Password cannot be empty',
+              minlength: 'Must contain at least 6 more characters'
+          },
+          Confirmpassword: {
+              equalTo: 'password does not match'
+          },
+          Name: {
+              required: 'Name cannot be empty'
+          },
+          email: {
+              required: 'Email cannot be empty'
+          },
+          birthday: {
+              required: 'Birthday cannot be empty'
+          },
+          
+      },
+      highlight: function (element) {
+          $(element).parent().addClass('errors')
+      },
+      unhighlight: function (element) {
+          $(element).parent().removeClass('errors')
+      }
+
+  });
+
+
+    </script>
+    
+  
+}
+
+
 }
 
 <div class="title-area clearfix main-color ">
@@ -55,8 +145,28 @@
                                     </div>
                                     <div class="u-column2 col-2">
                                         <h2>Register</h2>
-                                        <form method="post" class="register">
+                                        <form method="post" class="woocomerce-form woocommerce-form-login  register" id="frmregister">
 
+
+                                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for="reg_username">User name <span class="required">*</span></label>
+                                                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" value="" />
+                                            </p>
+
+                                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for="reg_Password">Password <span class="required">*</span></label>
+                                                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="Password" id="reg_Password" value="" />
+                                            </p>
+
+                                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for="reg_Confirmpassword">Confirm password <span class="required">*</span></label>
+                                                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="Confirmpassword" id="reg_Confirmpassword" value="" />
+                                            </p>
+
+                                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                <label for="reg_Name">Name <span class="required">*</span></label>
+                                                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="Name" id="reg_Name" value="" />
+                                            </p>
 
                                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                                                 <label for="reg_email">Email address <span class="required">*</span></label>
@@ -64,15 +174,15 @@
                                             </p>
 
                                             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                <label for="reg_password">Password <span class="required">*</span></label>
-                                                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
+                                                <label for="reg_birthday">Birthday <span class="required">*</span></label>
+                                                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text " name="birthday" id="reg_birthday" readonly/>
                                             </p>
 
                                             <!-- Spam Trap -->
                                             <div style="left: -999em; position: absolute;"><label for="trap">Anti-spam</label><input type="text" name="email_2" id="trap" tabindex="-1" autocomplete="off" /></div>
 
                                             <p class="woocomerce-FormRow form-row">
-                                                <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="6e24e3f22f" /><input type="hidden" name="_wp_http_referer" value="/my-account/" />				<input type="submit" class="woocommerce-Button button" name="register" value="Register" />
+                                                <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce"  /><input type="hidden" name="_wp_http_referer" value="/my-account/" />				<input type="submit" class="woocommerce-Button button" name="register" value="Register" />
                                             </p>
 
                                         </form>
