@@ -8,9 +8,23 @@
 
 
             <ul class="essential-top-menu">
+                @if (CurrentContext.IsLogged() == false)
+                {
+                    <li><a href="@Url.Action("Index","Account")" title="Login / Register" data-icon="&#xe076;">Login / Register</a></li>
+                }
+                else
+                {
+                    <li id="nav-menu-item-1759" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-parent-item menu-item-children-9">
+                        <a href="#" class="menu-link main-menu-link">@CurrentContext.GetCurUser().f_Username </a>
+                        <ul class="sub-menu">
+
+                            <li id="nav-menu-item-1568" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("Contact","Pages")" class="menu-link sub-menu-link">Your profile </a></li>
+                            <li id="nav-menu-item-2101" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a id="logout" href="@Url.Action("logout2","Account")">Log out </a></li>
+                        </ul>
+                    </li>
+                }
 
 
-                <li><a href="@Url.Action("Index","Account")" title="Login / Register" data-icon="&#xe076;">Login / Register</a></li>
 
 
 
@@ -83,8 +97,8 @@
             <div id="primary-menu" class="menu-main-menu-container">
                 <ul id="menu-main-menu" class="menu">
                     <li id="nav-menu-item-2033" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-children-2">
-                        <a href="@Url.Action("Index","Home")" >Home </a>
-                        
+                        <a href="@Url.Action("Index","Home")">Home </a>
+
                     </li>
                     <li id="nav-menu-item-1759" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-parent-item menu-item-children-9">
                         <a href="#" class="menu-link main-menu-link">Pages </a>
@@ -101,7 +115,7 @@
                                 <ul class="sub-menu">
                                     <li id="nav-menu-item-27" class="sub-menu-item sub-sub-menu-item menu-item-even menu-item-depth-2 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("PagePull","Pages")" class="menu-link sub-menu-link">Page Full Width </a></li>
                                     <li id="nav-menu-item-1522" class="sub-menu-item sub-sub-menu-item menu-item-even menu-item-depth-2 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("PageLeft","Pages")" class="menu-link sub-menu-link">Page Left Sidebar </a></li>
-                                    
+
                                     <li id="nav-menu-item-2061" class="sub-menu-item sub-sub-menu-item menu-item-even menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-children-0"><a href="@Url.Action("InnerPage","Pages")" class="menu-link sub-menu-link">Inner Page With Slider </a></li>
                                 </ul>
                             </li>
@@ -218,4 +232,3 @@
 
 
 </header>
-
