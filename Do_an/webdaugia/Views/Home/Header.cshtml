@@ -19,7 +19,7 @@
                         <a href="#" class="menu-link main-menu-link">@CurrentContext.GetCurUser().f_Username </a>
                         <ul class="sub-menu">
 
-                            <li id="nav-menu-item-1568" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("Contact","Pages")" class="menu-link sub-menu-link">Your profile </a></li>
+                            <li id="nav-menu-item-1568" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("AProfile","Account")" class="menu-link sub-menu-link">Your profile </a></li>
                             <li id="nav-menu-item-2101" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a id="logout" href="@Url.Action("logout2","Account")">Log out </a></li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@
 
             <div class="sitename clearfix">
                 <h2>
-                    <a href="../../index.html" title="shopping theme">Essential</a>
+                    <a href="@Url.Action("Index","Home")" title="shopping theme">Essential</a>
                 </h2>	 				<p>shopping theme</p>
             </div><!-- .sitename -->
 
