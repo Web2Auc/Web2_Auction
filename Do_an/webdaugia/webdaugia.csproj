@@ -1344,6 +1344,7 @@
     <Compile Include="Help\StringUtils.cs" />
     <Compile Include="Models\KH.cs" />
     <Compile Include="Models\Lg.cs" />
+    <Compile Include="Models\TKD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

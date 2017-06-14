@@ -47,7 +47,7 @@ namespace webdaugia.Controllers
                     f_Email = tk.email,
                     f_Name = tk.Name,
                     f_Permission = 0,
-                    f_DOB = DateTime.ParseExact(tk.birthday, "d/m/yyyy", null)
+                    f_DOB = DateTime.ParseExact(tk.birthday, "d/M/yyyy", null)
                 };
 
                 db.TaiKhoans.Add(T);
@@ -69,9 +69,10 @@ namespace webdaugia.Controllers
         [HttpPost]
         public ActionResult login(Lg tk)
         {
+            string encPwd = StringUtils.GetMD5(tk.Password);
             using (var ctx = new QLBHSEntities())
             {
-                var user = ctx.TaiKhoans.Where(u => u.f_Username == tk.username && u.f_Password == tk.Password).FirstOrDefault();
+                var user = ctx.TaiKhoans.Where(u => u.f_Username == tk.username && u.f_Password == encPwd).FirstOrDefault();
                 if (user != null)
                 {
                     Session["isLogin"] = 1;
@@ -98,10 +99,38 @@ namespace webdaugia.Controllers
         {
             return View();
         }
+        [CheckLogin]
         public ActionResult Detail()
         {
             return View();
         }
+        [HttpPost]
+        [CheckLogin]
+        public ActionResult Detail(TKD tk)
+        {
 
+
+            string encPwd = StringUtils.GetMD5(tk.password_current);
+            int id = int.Parse(CurrentContext.GetCurUser().f_ID.ToString());
+            if (CurrentContext.GetCurUser().f_Password == encPwd)
+            {
+
+                using (QLBHSEntities ctx = new QLBHSEntities())
+                {
+                    TaiKhoan model = ctx.TaiKhoans.Where(c => c.f_ID == id).FirstOrDefault();
+                    model.f_Name = tk.name;
+                    model.f_Email = tk.email;
+                    model.f_DOB = DateTime.ParseExact(tk.birthday, "d/M/yyyy", null);
+                    if (tk.Newpassword != null)
+                    {
+                        model.f_Password = StringUtils.GetMD5(tk.Newpassword);
+                    }
+                    ctx.SaveChanges();
+                    Session["user"] = model;
+                }
+
+            }
+            return View();
+        }
     }
 }
