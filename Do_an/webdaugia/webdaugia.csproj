@@ -1400,6 +1400,7 @@
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Account\Detail.cshtml" />
     <Content Include="Views\Account\AProfile.cshtml" />
+    <Content Include="Views\Auctions\Product.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
