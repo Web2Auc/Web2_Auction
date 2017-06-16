@@ -203,6 +203,8 @@
     <Content Include="wordpress\bootstrap_datepicker\locales\bootstrap-datepicker.vi.min.js" />
     <Content Include="wordpress\bootstrap_datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="wordpress\bootstrap_datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="wordpress\combodate-1.0.7\combodate.js" />
+    <Content Include="wordpress\combodate-1.0.7\moment.js" />
     <Content Include="wordpress\indexcff1.html" />
     <Content Include="wordpress\jquery-validation-1.16.0\demo\ajaxSubmit-integration-demo.html" />
     <Content Include="wordpress\jquery-validation-1.16.0\demo\bootstrap\index.html" />
@@ -1326,6 +1328,7 @@
     <Content Include="wordpress\jquery-validation-1.16.0\demo\captcha\rand.php" />
     <Content Include="wordpress\jquery-validation-1.16.0\package.json" />
     <Content Include="wordpress\jquery-validation-1.16.0\README.md" />
+    <Content Include="wordpress\combodate-1.0.7\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
