@@ -1333,6 +1333,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuctionsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\MegaMenuController.cs" />
@@ -1401,6 +1402,13 @@
     <Content Include="Views\Account\Detail.cshtml" />
     <Content Include="Views\Account\AProfile.cshtml" />
     <Content Include="Views\Auctions\Product.cshtml" />
+    <Content Include="Views\Shared\_Layoutadmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\users.cshtml" />
+    <Content Include="Views\Admin\Addcat.cshtml" />
+    <Content Include="Views\Admin\deletecat.cshtml" />
+    <Content Include="Views\Admin\editcat.cshtml" />
+    <Content Include="Views\Admin\deleteuser.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

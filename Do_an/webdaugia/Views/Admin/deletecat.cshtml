@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>deletecat</title>
+</head>
+<body>
+    <div>
+        <p>Do you want delete category Catid =  @ViewBag.id ?</p>
+        <a href="@Url.Action("Index","Admin")">Quay về</a>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.id" name="IDdelete" />
+            <button type="submit">Ok</button>
+        </form>
+    </div>
+</body>
+</html>
