@@ -15,14 +15,18 @@
                 }
                 else
                 {
-                    <li id="nav-menu-item-1759" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-parent-item menu-item-children-9">
-                        <a href="#" class="menu-link main-menu-link">@CurrentContext.GetCurUser().f_Username </a>
-                        <ul class="sub-menu">
+                    <li class="my-account  has-submenu">
+                        <a href="@Url.Action("AProfile","Account")" title="My Account" data-icon="">@CurrentContext.GetCurUser().f_Username</a>
 
-                            <li id="nav-menu-item-1568" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a href="@Url.Action("AProfile","Account")" class="menu-link sub-menu-link">Your profile </a></li>
-                            <li id="nav-menu-item-2101" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page menu-item-children-0"><a id="logout" href="@Url.Action("logout2","Account")">Log out </a></li>
+                        <ul style="display: none;">
+                            <li class="logout-link"><a href="@Url.Action("logout2","Account")">Logout</a></li>
                         </ul>
+
                     </li>
+                    if (CurrentContext.GetCurUser().f_Permission == 2)
+                    {
+                        <li><a href="@Url.Action("Index","Admin")" title="Admin">Admin</a></li>
+                    }
                 }
 
 

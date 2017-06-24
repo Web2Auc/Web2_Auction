@@ -4,35 +4,26 @@
     Layout = "~/Views/Shared/_Layoutadmin.cshtml";
 }
 @model List<webdaugia.Models.DanhMuc>
-@section css{
-
-    <style type="text/css">
-        th, td {
-            color: black;
-        }
-    </style>
-}
-<div class="panel  panel-primary">
-    <table class="table">
-        <thead>
-            <tr class="info">
-                <th>Catid</th>
-                <th>Catname</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var c in Model)
+<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+    <thead>
+        <tr class="info">
+            <th>Catid</th>
+            <th>Catname</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
             {
-                <tr>
-                    <td>@c.DMID</td>
-                    <td>@c.TenDM</td>
-                    <td><a href="@Url.Action("editcat","Admin",new {id = c.DMID })">Edit</a></td>
-                    <td><a href="@Url.Action("deletecat","Admin",new {id = c.DMID })">Delete</a></td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            <tr>
+                <td>@c.DMID</td>
+                <td>@c.TenDM</td>
+                <td><a href="@Url.Action("editcat","Admin",new {id = c.DMID })">Edit</a></td>
+                <td><a href="@Url.Action("deletecat","Admin",new {id = c.DMID })">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 <a href="@Url.Action("Addcat", "Admin")"><h3>Add new</h3></a>

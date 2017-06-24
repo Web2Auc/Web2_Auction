@@ -132,5 +132,24 @@ namespace webdaugia.Controllers
             }
             return View();
         }
+        public ActionResult becomeauctioneer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult becomeauctioneer(int id)
+        {
+            var a = DateTime.Now;
+            using (QLBHSEntities db = new QLBHSEntities())
+            {
+                var user = db.TaiKhoans.Where(c => c.f_ID == id).FirstOrDefault();
+                user.f_Permission = 1;
+                user.f_DateToExpire = a;
+                db.SaveChanges();
+                Session["user"] = user;
+            }
+
+            return RedirectToAction("AProfile", "Account");
+        }
     }
 }

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "usersA";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+@model List<webdaugia.Models.TaiKhoan>
+
+<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+    <thead>
+        <tr class="info">
+            <th>UserId</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>date of application</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+            {
+            <tr>
+                <td>@c.f_ID</td>
+                <td>@c.f_Username</td>
+                <td>@c.f_Name</td>
+                <td>@c.f_Email</td>
+                <td>@c.f_DateToExpire</td>
+                <td>
+                    <a href="#" id="@c.f_ID" name="@c.f_ID">Agree</a>
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+@foreach (var c in Model)
+{
+    <form method="post" action="@Url.Action("usersAagr", "Admin")" id="frm_@c.f_ID" name="frm_@c.f_ID">
+        <input type="hidden" id="id" name="id" value="@c.f_ID" />
+    </form>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $('#@c.f_ID').on('click', function () {
+               $('#frm_@c.f_ID').submit();
+            });
+        });
+    </script>
+}

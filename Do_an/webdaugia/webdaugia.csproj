@@ -1409,6 +1409,7 @@
     <Content Include="Views\Admin\deletecat.cshtml" />
     <Content Include="Views\Admin\editcat.cshtml" />
     <Content Include="Views\Admin\deleteuser.cshtml" />
+    <Content Include="Views\Admin\usersA.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
