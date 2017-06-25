@@ -36,5 +36,17 @@ namespace webdaugia.Controllers
             }
 
         }
+
+
+        // GET: Products
+        public ActionResult List_DatetoExpire()
+        {
+            using (var ctx = new QLBHSEntities())
+            {
+                var list = ctx.SanPhams.OrderByDescending(p => p.NgayNhap).Take(5).ToList();
+                return PartialView("ListPartial", list);
+            }
+
+        }
     }
 }
