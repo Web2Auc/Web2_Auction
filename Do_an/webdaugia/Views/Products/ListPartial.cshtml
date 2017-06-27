@@ -4,29 +4,7 @@
 
 @foreach(var s  in Model)
 {
-    @*<li class="post-2343 product type-product status-publish has-post-thumbnail product_cat-breitling product_cat-ess product_cat-fortis product_tag-fortis-2 product_tag-man-2 first instock sold-individually shipping-taxable product-type-auction">
-                                    <a href=@s.TenSP class="woocommerce-LoopProduct-link">
-                                        <a href="product/fortis-mens-flieger-chrono-alarm-croco-leather-watch-auction/index.html">
-                                            <div class="thumb-wrapper"><img width="430" height="430" src="~/wordpress/wp-content/uploads/2013/08/703-1-430x430.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="703-1" title="703-1" /></div>
-                                            <span class="auction-bage"></span>
-                                            <h3>@s.TenSP</h3>
-                                            <span class="price"><span class="winned-for auction">Bid:</span> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>@s.Gia</span></span>
-                                            <br />
-                                            <label>Auction count: @s.SoLuocDauGia</label>
-                                            <span class="price"><span class="winned-for auction">Date to Expire:</span> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>@s.NgayNhap</span></span>
-                                        </a>
-                                        <div class="action-buttons">
-                                            <a href="product/fortis-mens-flieger-chrono-alarm-croco-leather-watch-auction/index.html" class="view-product linkcolor-as-bg" title="View product"><span data-icon="&#xe024;"></span></a>
-                                            <a href="#" data-product-id="2343" class="add-compare  linkcolor-as-bg" title="Compare product"><span data-icon="&#xe09a;"></span></a>
-                                            <a href="#" data-product-id="2343" class="add-wishlist linkcolor-as-bg" title="Add to wishlist"><span data-icon="&#xe01a;"></span></a>
-                                        </div>	<div class='circle-wrapper'>
-                                            <span>+</span>
-
-                                        </div>
-                                    </a>
-                                </li>*@
-
-
+    
     <li class="post-2342 product type-product status-publish has-post-thumbnail product_cat-swatch-kids-2 product_tag-fun product_tag-swatch  instock sold-individually shipping-taxable purchasable product-type-auction">
         <a href="product/swatch-womens-quartz-rainbow-dial-plastic-watch-auction/index.html" class="woocommerce-LoopProduct-link">
             <a href="product/swatch-womens-quartz-rainbow-dial-plastic-watch-auction/index.html">
@@ -40,7 +18,7 @@
                 <span class="price"><span class="auction-price" data-auction-id="2342" data-bid="4" data-status="running"><span class="current auction">Current bid:</span> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>@s.Gia</span></span></span>
             </a>
             <div class="action-buttons">
-                <a href="product/swatch-womens-quartz-rainbow-dial-plastic-watch-auction/index.html" class="view-product linkcolor-as-bg" title="View product"><span data-icon="&#xe024;"></span></a>
+                <a href="@Url.Action("Product","Auctions")" class="view-product linkcolor-as-bg" title="View product"><span data-icon="&#xe024;"></span></a>
 
                 <a href="product/swatch-womens-quartz-rainbow-dial-plastic-watch-auction/index.html" rel="nofollow" data-product_id="2342" data-product_sku="124" class="add_to_cart_button product_type_auction linkcolor-as-bg" title="Add to cart"><span data-icon="&#xe067;"></span></a>
 

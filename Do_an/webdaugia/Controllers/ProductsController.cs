@@ -48,5 +48,20 @@ namespace webdaugia.Controllers
             }
 
         }
+
+        public ActionResult Detail()
+        {
+            //if (id.HasValue == false) 
+            //{
+            //    return RedirectToAction("Index", "Home");
+            //}
+            //using (ctx)
+            //{
+            //    var model = ctx.SanPhams.FirstOrDefault();
+            //    return View(model);
+
+            //}
+            return View();
+        }
     }
 }
