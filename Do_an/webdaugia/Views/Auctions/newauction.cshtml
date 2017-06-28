@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "newauction";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+@model List<webdaugia.Models.DanhMuc>
+@section css{
+<link href="~/wordpress/assets/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+<link href="~/wordpress/bootstrap-select-1.12.2/dist/css/bootstrap-select.css" rel="stylesheet" />
+<link href="~/wordpress/bootstrap-select-1.12.2/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <style type="text/css">
+
+        .colorsp {
+            color: #F00;
+        }
+        .error {
+            color: #F00;
+            background-color: #FFF;
+        }
+        label{
+            font-weight: normal;
+        }
+        .title-area{
+            height:auto;
+        }
+    </style>
+}
+
+@section js{
+   
+<script src="~/wordpress/bootstrap.file-input.js"></script>
+<script src="~/wordpress/bootstrap-select-1.12.2/dist/js/bootstrap-select.js"></script>
+<script src="~/wordpress/bootstrap-select-1.12.2/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+
+            $('input[type=file]').bootstrapFileInput();
+
+        });
+    </script>
+
+
+
+    }
+<div class="title-area clearfix main-color ">
+    <div class="inner">
+        <h1 class="title">My Account</h1>
+        <nav class="woocommerce-breadcrumb"><a href="#">Home</a>&nbsp;/&nbsp;<a href="#">My Account</a>&nbsp;/&nbsp; Detail</nav>
+    </div><!-- .inner -->
+</div><!-- .title-area .clearfix -->
+
+<div id="primary" class="content-area">
+
+    <div class="inner">
+
+        <div id="content" class="site-content" role="main">
+
+
+            <article id="post-7" class="post-7 page type-page status-publish hentry">
+                <div class="entry-wrap clearfix">
+
+                    <div class="entry-content-wrap clearfix no-thumb">
+                        <div class="entry-content">
+                            <div class="woocommerce">
+                                <div class="woocommerce-MyAccount-content">
+
+                                    <form class="woocommerce-EditAccountForm edit-account" action="" method="post" id="Product" enctype="multipart/form-data">
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+                                            <label for="account_email">Name Product<span class="required">*</span></label>
+                                            <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="name" id="name">
+                                            <label class="error">@ViewBag.n</label>
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first right-side-title">
+                                            <label for="account_email">Catgory <span class="required">*</span></label>                           
+                                                        <select name="category" class="orderby">
+                                                            @foreach (var c in Model)
+                                                            {
+                                                            <option value="@c.TenDM">@c.TenDM</option>
+                                                            }
+                                                        </select>
+
+
+                                        </p>
+                                        
+                                        
+                                        <div class="clear"></div>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first  form-row-first">
+                                            <label for="account_email">Starting price <span class="colorsp">*</span></label>
+                                            <input type="number" name="Starting_price" data-auction-id="2340" value="0" min="1" step="any" size="6" title="bid" class="input-text qty  bid text left">
+                                            <label>$</label>
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first  form-row-first">
+                                            <label for="account_email">Price step <span class="colorsp">*</span></label>
+                                            <input type="number" name="Price_step" data-auction-id="2340" value="1" min="1" step="any" size="6" title="bid" class="input-text qty  bid text left">
+                                            <label>$</label>
+                                        </p>
+
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first" >
+                                            <label for="account_email">large image <span class="colorsp">*</span></label>
+                                            <label >Image 1:</label>
+                                            <input name="h1" type="file">
+                                            <label>Image 2:</label>
+                                            <input name="h2" type="file">
+                                            <label>Image 3:</label>
+                                            <input name="h3" type="file" name="bid_value">
+                                           
+
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+                                            <label for="account_email">Thumbnail <span class="colorsp">*</span></label>
+                                            <label>Image 1:</label>
+                                            <input name="ht1" type="file">
+                                            <label>Image 2:</label>
+                                            <input name="ht2" type="file" name="bid_value">
+                                            <label>Image 3:</label>
+                                            <input name="ht3" type="file" name="bid_value">
+                                            
+
+                                        </p>
+                                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                            <label for="account_email">Description <span class="required">*</span></label>
+                                            <textarea name="Description" class="input-text " id="order_comments" rows="2" cols="5"></textarea>
+                                        </p>
+                                        <p>
+                                            <input type="hidden" id="_wpnonce" name="_wpnonce" value="503e6e5e1d"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">		<input type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">
+                                            <input type="hidden" name="action" value="save_account_details">
+                                        </p>
+
+                                    </form>
+                                    
+
+                                </div>
+
+
+
+                            </div>
+                        </div><!-- .entry-content -->
+
+                    </div><!-- .entry-content-wrap .clearfix .no-thumb -->
+                </div><!-- .entry-wrap .clearfix -->
+            </article><!-- #post-7 -->
+
+
+        </div><!-- #content .site-content -->
+
+
+
+
+
+    </div><!-- .inner -->
+
+</div>

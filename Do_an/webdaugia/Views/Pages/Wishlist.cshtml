@@ -1,9 +1,9 @@
 ﻿
 @{
     ViewBag.Title = "Wishlist";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
 }
-
+@model List<webdaugia.Models.SanPham>
 <div class="title-area clearfix main-color">
 
     <div class="inner">
@@ -24,15 +24,56 @@
 
 
 
+@if (Model.Count() == 0)
+{
+    <div id="container">
+        <div id="content" role="main">
 
-<div id="container">
-    <div id="content" role="main">
+            <p class="woocommerce-info">No products found in your wishlist.</p>
 
-
-
-
-        <p class="woocommerce-info">No products found in your wishlist.</p>
-
+        </div>
     </div>
-</div>   
+}
+else
+{
+    <div id="container">
+        <div id="content" role="main">
 
+
+
+
+            <ul class="products">
+                @foreach (var a in Model)
+                {
+
+                    <li class="product">
+                        <a href="../../../product/morphy-richards-colour-accents-pyramid-cordless-kettle-1-5-litres/index.html" class="woocommerce-LoopProduct-link">
+                            <a href="../../../product/morphy-richards-colour-accents-pyramid-cordless-kettle-1-5-litres/index.html">
+                                <div class="thumb-wrapper"><img width="430" height="430" src="~/Img/@a.SPID/main1_thumbs.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="434-1" title="434-1" /></div>
+                                <h3>@Html.Raw(a.TenSP)</h3>
+                                <span class='short-description'>Silver sunray dial with a Mother of Pearl center...</span>
+                                <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>115.00</span></span>
+                            </a>
+                            <div class="action-buttons">
+                                <a href="../../../product/morphy-richards-colour-accents-pyramid-cordless-kettle-1-5-litres/index.html" class="view-product linkcolor-as-bg" title="View product"><span data-icon="&#xe024;"></span></a>
+
+                                <a href="indexf8c0.html?add-to-cart=1325" rel="nofollow" data-product_id="1325" data-product_sku="W013" class="add_to_cart_button product_type_simple linkcolor-as-bg" title="Add to cart"><span data-icon="&#xe067;"></span></a>
+
+                                <a href="#" data-product-id="1325" class="add-compare  linkcolor-as-bg" title="Compare product"><span data-icon="&#xe09a;"></span></a>
+
+                                <a href="#" data-product-id="1325" class="add-wishlist linkcolor-as-bg" title="Add to wishlist"><span data-icon="&#xe01a;"></span></a>
+                            </div>	<div class='circle-wrapper'>
+                                <span>+</span>
+
+                            </div>
+                        </a>
+                    </li>
+                }
+
+
+            </ul>
+
+
+        </div>
+    </div>
+}
