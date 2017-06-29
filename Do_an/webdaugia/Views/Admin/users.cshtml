@@ -4,32 +4,42 @@
     Layout = "~/Views/Shared/_Layoutadmin.cshtml";
 }
 @model List<webdaugia.Models.TaiKhoan>
-<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
-    <thead>
-        <tr>
-            <th>UserId</th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>DOB</th>
-            <th>Permission</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var c in Model)
-            {
-            <tr>
-                <td>@c.f_ID</td>
-                <td>@c.f_Username</td>
-                <td>@c.f_Name</td>
-                <td>@c.f_Email</td>
-                <td>@c.f_DOB</td>
-                <td>@c.f_Permission</td>
-                <td><a href="@Url.Action("deleteuser","Admin",new {id = c.f_ID })">Delete</a></td>
-                <td><a href="#">Reset Password</a></td>
-            </tr>
+@section css{
+
+    <style type="text/css">
+        th, td {
+            color: black;
         }
-    </tbody>
-</table>
-
-
+    </style>
+}
+<div class="panel  panel-primary">
+    <table class="table">
+        <thead>
+            <tr class="info">
+                <th>UserId</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>Permission</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@c.f_ID</td>
+                    <td>@c.f_Username</td>
+                    <td>@c.f_Password</td>
+                    <td>@c.f_Name</td>
+                    <td>@c.f_Email</td>
+                    <td>@c.f_DOB</td>
+                    <td>@c.f_Permission</td>
+                    <td><a href="@Url.Action("deleteuser","Admin",new {id = c.f_ID })">Delete</a></td>
+                    <td><a href="#">Reset Password</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

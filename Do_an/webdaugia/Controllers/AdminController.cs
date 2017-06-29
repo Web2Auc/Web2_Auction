@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using webdaugia.Fillter;
 using webdaugia.Models;
 
 namespace webdaugia.Controllers
 {
-    [CheckAdmin]
     public class AdminController : Controller
     {
-
+        // GET: Admin
         public ActionResult Index()
+        {
+            QLBHSEntities db = new QLBHSEntities();
+            var model = db.DanhMucs.ToList();
+            return View(model);
+        }
+
+        public ActionResult users()
+        {
+            QLBHSEntities db = new QLBHSEntities();
+            var model = db.TaiKhoans.ToList();
+            return View(model);
+        }
+        public ActionResult usersA()
         {
             QLBHSEntities db = new QLBHSEntities();
             var model = db.DanhMucs.ToList();
@@ -23,7 +34,6 @@ namespace webdaugia.Controllers
             return View();
         }
         [HttpPost]
-
         public ActionResult Addcat(String name)
         {
             using (QLBHSEntities db = new QLBHSEntities())
@@ -46,7 +56,6 @@ namespace webdaugia.Controllers
             return View();
         }
         [HttpPost]
-
         public ActionResult deletecat(int IDdelete)
         {
             using (QLBHSEntities db = new QLBHSEntities())
@@ -55,10 +64,8 @@ namespace webdaugia.Controllers
                 db.DanhMucs.Remove(dm);
                 db.SaveChanges();
             }
-
             return RedirectToAction("Index", "Admin");
         }
-
         public ActionResult editcat(int? id)
         {
             if (id.HasValue == false)
@@ -81,14 +88,6 @@ namespace webdaugia.Controllers
 
             return RedirectToAction("Index", "Admin");
         }
-
-
-        public ActionResult users()
-        {
-            QLBHSEntities db = new QLBHSEntities();
-            var model = db.TaiKhoans.ToList();
-            return View(model);
-        }
         public ActionResult deleteuser(int? id)
         {
             if (id.HasValue == false)
@@ -109,24 +108,5 @@ namespace webdaugia.Controllers
             }
             return RedirectToAction("users", "Admin");
         }
-        public ActionResult usersA()
-        {
-            QLBHSEntities db = new QLBHSEntities();
-            var model = db.TaiKhoans.Where(c => c.f_Permission == 1).ToList();
-            return View(model);
-        }
-        [HttpPost]
-        public ActionResult usersAagr(int id)
-        {
-            using (QLBHSEntities db = new QLBHSEntities())
-            {
-                TaiKhoan user = db.TaiKhoans.Where(c => c.f_ID == id).FirstOrDefault();
-                user.f_Permission = 3;
-                db.SaveChanges();
-
-            }
-            return RedirectToAction("usersA", "Admin");
-        }
-
     }
 }

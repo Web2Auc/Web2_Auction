@@ -1,4 +1,9 @@
-﻿<html lang="en-US">
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from essential.prospekt-solutions.com/product/juicy-couture-womens-1901038-stella-gold-plated-bracelet-watch/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2017 19:00:21 GMT -->
+<!-- Added by HTTrack -->
+
 <head>
 
     <meta name="viewport" content="width=device-width" />
@@ -37,6 +42,10 @@
             padding: 0 !important;
         }
     </style>
+    <link href="~/wordpress/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/wordpress/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/wordpress/assets/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/wordpress/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel='stylesheet' id='simple-style-switcher-css' href='../../wordpress/wp-content/plugins/simple-style-customizer/css/style.css' type='text/css' media='all' />
     <link rel='stylesheet' id='chosen-css' href='../../wordpress/wp-content/plugins/simple-style-customizer/css/chozen.css' type='text/css' media='all' />
     <link rel='stylesheet' id='js-colorpicker-css' href='../../wordpress/wp-content/plugins/simple-style-customizer/css/colorpicker.css' type='text/css' media='all' />
@@ -90,75 +99,36 @@ var SA_Ajax = {"ajaxurl":"\/product\/juicy-couture-womens-1901038-stella-gold-pl
     @RenderSection("css", false)
 
 </head>
-
-<body class="page-template-default page page-id-1520 layout-left page-template-default page page-id-5 logged-in admin-bar no-customize-support woocommerce-cart woocommerce-page ">
+<body class="product-template-default single single-product postid-1766 woocommerce woocommerce-page layout-full">
 
     <div id="wrapper">
-
         @Html.Action("Header", "Home")<!-- #header -->
-        <div class="title-area clearfix main-color ">
-            <div class="inner">
-                <h1 class="title">Sample Page Left Sidebar</h1>
-                <nav class="woocommerce-breadcrumb"><a href="../index.html">Home</a>&nbsp;&#47;&nbsp;Sample Page Left Sidebar</nav>
-            </div><!-- .inner -->
-        </div><!-- .title-area .clearfix -->
 
-        <div id="primary" class="content-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel  panel-primary">
+                        <div class="panel-heading">Menu</div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item" name="Users_assigned" id="Users_assigned">Users assigned</a>
+                            <a href="@Url.Action("Index","Admin")" class="list-group-item">Category</a>
+                            <a href="@Url.Action("users","Admin")" class="list-group-item">User</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
 
-            <div class="inner">
+                    @RenderBody()
 
-                <div id="content" class="site-content" role="main">
+                </div>
+            </div>
+        </div>
 
-
-                    <article id="post-1520" class="post-1520 page type-page status-publish has-post-thumbnail hentry">
-                        <div class="entry-wrap clearfix">
-                            <div class="entry-content">
-                                <div class="woocommerce">
-
-                                    @RenderBody()<!-- .entry-content-wrap .clearfix .no-thumb -->
-
-                                </div>
-                            </div>
-                        </div><!-- .entry-wrap .clearfix -->
-                    </article><!-- #post-1520 -->
-
-
-                </div><!-- #content .site-content -->
+    </div>
 
 
 
-
-
-                <div id="sidebar">
-                    <section id="recent_auctions-4" class="widget woocommerce widget_recent_auctions">
-                        <h3 class="widget-title bg-color2">Menu</h3><ul class="product_list_widget">
-                            <li>
-                                <a href="@Url.Action("usersA", "Admin")">
-                                    Users assigned
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Index","Admin")">
-                                    Category
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="@Url.Action("users","Admin")">
-                                    User
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </div><!-- #sidebar -->
-
-            </div><!-- .inner -->
-
-        </div><!-- #primary .content-area -->
-
-        @Html.Action("Footer", "Home")<!-- .site-footer -->
-
+    @Html.Action("Footer", "Home")<!-- .site-footer -->
     </div><!-- #wrapper -->
 
 
@@ -176,45 +146,53 @@ var SA_Ajax = {"ajaxurl":"\/product\/juicy-couture-womens-1901038-stella-gold-pl
     <link id="ssc-mainfontlink" href="http://fonts.googleapis.com/css?family=Carme" rel="stylesheet" type="text/css" />
     <link id="ssc-contentfontlink" href="http://fonts.googleapis.com/css?family=Carme" rel="stylesheet" type="text/css" />
 
-    <link rel='stylesheet' id='ssc-color-style-css' href='../wordpress/wp-content/themes/essential/css/Blue.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ssc-color-style-css' href='../../wordpress/wp-content/themes/essential/css/blue.css' type='text/css' media='all' />
+
 
 
     <script>
     jQuery(document).ready(function () {
-		jQuery.post('../indexc766.html?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+		jQuery.post('../../indexc766.html?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
 			var F = new Function ( response );
 			return( F() );
 		});
     });
     </script>
-    <script type='text/javascript' src='../wordpress/wp-includes/js/comment-reply.min.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/simple-style-customizer/js/chosen.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/simple-style-customizer/js/jscolor.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/simple-style-customizer/js/jquery-cookie.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/simple-style-customizer/js/simple-style-customizer.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-includes/js/comment-reply.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/simple-style-customizer/js/chosen.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/simple-style-customizer/js/jscolor.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/simple-style-customizer/js/jquery-cookie.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/simple-style-customizer/js/simple-style-customizer.js'></script>
     <script type='text/javascript'>
 /* <![CDATA[ */
-var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/sample-page-left-sidebar\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/essential.prospekt-solutions.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/product\/juicy-couture-womens-1901038-stella-gold-plated-bracelet-watch\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/essential.prospekt-solutions.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
 /* ]]> */
     </script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js'></script>
     <script type='text/javascript'>
 /* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/sample-page-left-sidebar\/?wc-ajax=%%endpoint%%"};
+var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":false,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false},"zoom_enabled":"","photoswipe_enabled":"","flexslider_enabled":""};
 /* ]]> */
     </script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js'></script>
     <script type='text/javascript'>
 /* <![CDATA[ */
-var wc_cart_fragments_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/sample-page-left-sidebar\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
+var woocommerce_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/product\/juicy-couture-womens-1901038-stella-gold-plated-bracelet-watch\/?wc-ajax=%%endpoint%%"};
 /* ]]> */
     </script>
-    <script type='text/javascript' src='../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js'></script>
-    <script type='text/javascript' src='../wordpress/wp-includes/js/wp-embed.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js'></script>
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/product\/juicy-couture-womens-1901038-stella-gold-plated-bracelet-watch\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='../../wordpress/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='../../wordpress/wp-includes/js/wp-embed.min.js'></script>
     @RenderSection("js", false)
+
 </body>
 
-<!-- Mirrored from essential.prospekt-solutions.com/sample-page-left-sidebar/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2017 18:59:59 GMT -->
+<!-- Mirrored from essential.prospekt-solutions.com/product/juicy-couture-womens-1901038-stella-gold-plated-bracelet-watch/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Apr 2017 19:00:33 GMT -->
 </html>
